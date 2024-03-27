@@ -19,15 +19,32 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "strictPropertyInitialization": false,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["ES2022", "dom"],
+    "paths": {
+      "@fepweb/core/models": ["src/app/core/models/index.ts"],
+      "@fepweb/core/enums": ["src/app/core/enums/index.ts"],
+      "@fepweb/core/resources": ["src/app/core/resources/index.ts"],
+      "@fepweb/core/services": ["src/app/core/services/index.ts"],
+      "@fepweb/core/auth": ["src/app/core/auth/index.ts"],
+      "@fepweb/core/translate": ["src/app/core/i18n/index.ts"],
+      "@fepweb/facades": ["src/app/facades/index.ts"],
+      "@fepweb/shared": ["src/app/shared/index.ts"],
+      "@environment": ["src/environments/environment.ts"],
+      "exceljs": ["node_modules/exceljs/dist/exceljs.min"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "extendedDiagnostics": {
+      "checks": {
+        "optionalChainNotNullable": "suppress"
+      }
+    }
   }
 }

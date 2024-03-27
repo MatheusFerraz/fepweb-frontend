@@ -1,0 +1,373 @@
+/* --------------------------- General Overrides -------------------------- */
+.po-icon-btn [class*='po-icon-']::before {
+  font-size: 2rem;
+}
+
+.po-full-width-btn .po-button {
+  width: 100%;
+}
+
+.po-full-width-btn po-button {
+  display: block;
+}
+
+app-card-common-dashboard .po-container {
+  background: var(--totvs-theme-neutral-light-00, #fff);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+  --padding: 24px;
+}
+
+.full-height .po-container {
+  height: 100% !important;
+}
+
+// Fonts
+.po-page-header-title {
+  color: var(--totvs-theme-base, #045b8f);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.po-label {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+// PO Container
+.to-override.po-container {
+  border-right: 0;
+}
+
+// Number
+.number-with-percentage {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-weight: bolder;
+}
+
+// PO Icon
+.po-icon-plus-circle {
+  color: #045b8f;
+}
+
+.po-icon-delete {
+  color: #9b2d27;
+}
+
+// PO Table
+.po-table {
+  font-size: 14px;
+}
+
+.po-table-header-ellipsis {
+  font-size: 15px;
+}
+
+// PO Tag
+.po-tag-value {
+  font-size: 12px;
+}
+
+// PO Image
+.po-container-image .po-container {
+  border: none;
+}
+
+// PO Switch
+po-switch > po-field-container > .po-field-container {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  align-items: center;
+}
+
+//PO Text area
+.po-textarea {
+  background: white;
+}
+
+po-switch
+  > po-field-container
+  > .po-field-container
+  > .po-field-container-title
+  > po-label
+  > label {
+  color: #045b8f;
+}
+
+/* --------------------------- Main Variables -------------------------- */
+:root {
+  --color-page-background-color-page: #fbfbfb;
+}
+
+/* ---------------------------- Toolbar Variables --------------------------- */
+:root {
+  --toolbar-height: 48px;
+  --color-toolbar-color-default: var(--color-text);
+  --color-toolbar-background-color-toolbar: var(--color-toolbar-color);
+}
+
+/* --------------------------- Toolbar Overrides -------------------------- */
+.po-toolbar {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0;
+  height: 48px;
+  z-index: 99;
+
+  .po-toolbar-image-middle {
+    vertical-align: middle;
+  }
+
+  .po-font-text {
+    font-size: 0.75rem;
+    @media (min-width: 769px) {
+      font-size: 0.875rem;
+    }
+  }
+
+  .po-icon:not(.po-icon-close):not(.po-icon-ok):not(.po-icon-signal) {
+    @media (min-width: 769px) {
+      font-size: 0.875rem;
+    }
+  }
+
+  .po-switch {
+    &-content {
+      margin-top: 0;
+    }
+
+    &-label {
+      font-size: 14px;
+    }
+  }
+
+  .po-toolbar {
+    @media screen and (max-width: 1200px) {
+      margin-left: 44px !important;
+      width: calc(100% - 44px) !important;
+      padding-right: 0;
+    }
+
+    @media screen and (max-width: 1024px) {
+      .po-wrapper .po-toolbar {
+        margin-left: 44px;
+      }
+    }
+  }
+}
+
+/* --------------------------- Icon Overrides -------------------------- */
+.po-icon.po-icon-flag-es-es:before {
+  background-image: url('/assets/img/flags/es-es-flag.png');
+}
+
+.po-icon.po-icon-flag-en-uk:before {
+  background-image: url('/assets/img/flags/en-uk-flag.png');
+}
+
+.po-icon.po-icon-flag-pt-br:before {
+  background-image: url('/assets/img/flags/pt-br-flag.png');
+}
+
+.po-icon.po-icon {
+  &-flag-es-es:before,
+  &-flag-en-uk:before,
+  &-flag-pt-br:before {
+    content: ' ';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-size: 14px 14px;
+  }
+}
+
+/* --------------------------- Popup Overrides -------------------------- */
+.po-popup {
+  .po-item-list {
+    font-size: 0.875rem;
+    min-height: 2.75rem;
+  }
+
+  *:focus {
+    outline: none;
+  }
+}
+
+.po-popup {
+  z-index: 99;
+}
+
+.po-popup-container {
+  max-height: none;
+}
+
+/* --------------------------- Link Overrides -------------------------- */
+.po-link {
+  max-width: max-content;
+}
+
+/* --------------------------- Box Overrides -------------------------- */
+.po-wrapper.hide-menu {
+  .po-page,
+  .po-toolbar {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* --------------------------- Menu Overrides -------------------------- */
+po-menu {
+  --background-color: var(--color-neutral-dark-90);
+  --border-color: var(--color-neutral-dark-70);
+  --color-menu-filter-background-color: var(--color-neutral-dark-95);
+  --color-menu-filter-border: var(--color-neutral-dark-70);
+  --color-menu-filter-border-focusable: var(--color-neutral-dark-70);
+  --outline-color-focused: var(--color-neutral-light-20);
+  --color-outline-focused: var(--color-neutral-light-20);
+  --color-scrollbar: rgba(255, 255, 255, 0.5);
+  --color-scrollbar-thumb: rgba(255, 255, 255, 0.2);
+  --color-scrollbar-track: var(--color-neutral-dark-95);
+  --color-menu-filter-color-icon: var(--color-neutral-light-00);
+  --color-menu-color-menu-sub-item-text: var(--color-brand-01-lighter);
+  --color-menu-color-menu-item-text: var(--color-brand-01-lighter);
+  --color-menu-color-menu-collapse-icon: var(--color-brand-01-lighter);
+
+  color-scheme: dark;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--color-neutral-light-00) 44px,
+    var(--color-transparent) 44px
+  );
+  width: 100%;
+  pointer-events: none;
+  z-index: 9999;
+
+  .po-menu,
+  .po-menu-overlay,
+  .po-menu-mobile {
+    pointer-events: all;
+  }
+
+  .po-menu {
+    border-radius: 0;
+    border-color: var(--background-color);
+    border-right-color: var(--color-neutral-dark-70);
+    border-left: none;
+    transition: width 0.35s ease;
+
+    .po-menu-item {
+      --color-hover: var(--color-brand-01-lightest);
+      --color-actived: var(--color-brand-01-lightest);
+
+      --background-color-actived: var(--color-brand-01-dark);
+      --background-color-hover: var(--color-brand-01-darker);
+      --background-color-pressed: var(--color-brand-01-darkest);
+
+      &:after {
+        transition: none;
+      }
+    }
+
+    .po-menu-icon-container:after {
+      clear: unset;
+      display: block;
+      font-size: unset;
+      height: 100%;
+      visibility: unset;
+    }
+
+    .po-menu-header-container-logo {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .po-menu-logo {
+        height: 1.5rem;
+        padding-left: 0.55rem;
+        min-width: 9.19rem;
+      }
+
+      .po-menu-short-logo {
+        height: 1.5rem;
+        width: 1.5rem;
+        padding: 0;
+      }
+    }
+
+    .po-menu-item-level-two:before {
+      content: '';
+      padding-left: var(--spacing-2xl);
+    }
+
+    .po-menu-item.po-menu-item-level-two {
+      justify-content: flex-start;
+    }
+
+    .po-menu-collapse-button-icon,
+    .po-menu-item {
+      white-space: nowrap;
+      overflow: hidden;
+      gap: 0.4rem;
+    }
+
+    .po-menu-collapse-button-icon,
+    .po-menu-item {
+      white-space: nowrap;
+      overflow: hidden;
+      gap: 0.4rem;
+    }
+
+    .po-menu-icon-item {
+      padding: 0 0.5rem;
+    }
+
+    .po-menu-filter {
+      --background-hover: var(--color-brand-01-darkest);
+      --color-menu-filter-color-text: var(--color-neutral-light-30);
+    }
+
+    .po-menu-filter-close-icon-container .po-icon-close {
+      --color-clear: var(--color-brand-01-lightest);
+    }
+
+    .po-menu-filter-close-icon-container .po-icon,
+    .po-menu-filter-search-icon-container .po-icon {
+      font-size: 1.4rem;
+    }
+
+    .po-menu-item-link:focus > .po-menu-item:not(.po-menu-item-no-data),
+    .po-menu-item:not(.po-menu-item-no-data):is(:focus, :focus-visible) {
+      outline-color: var(--color-neutral-light-20);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .po-menu-mobile {
+      padding-left: 8px;
+    }
+  }
+}
+
+.po-collapsed-menu po-menu .po-menu .po-menu-header-container-logo {
+  justify-content: center;
+}
+
+.po-menu-mobile {
+  height: 40px;
+  padding: 9px 0;
+  left: 5px;
+}
+
+.po-button[p-kind='tertiary'] {
+  color: var(--color);
+  background-color: var(--background-color);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow);
+}
