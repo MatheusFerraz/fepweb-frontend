@@ -1,5 +1,5 @@
 import { TranslateService } from '@ngx-translate/core';
-import { criarProvider } from './create-service.stub';
+import { criarProvider } from './criar-provider';
 import { Observable, of } from 'rxjs';
 
 export const translateServiceStub = criarProvider(TranslateService, {
