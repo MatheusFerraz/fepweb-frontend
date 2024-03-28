@@ -1,5 +1,9 @@
 {
   "tituloPagina": {
     "gerenciamentoParticipantes": "Gerenciar Participantes"
+  },
+  "label": {
+    "mensagemErroLadoServidor": "Ocorreu um erro ao processar a operação.",
+    "mensagemErroBrowser": "Não foi possível concluir a operação. Ocorreu um erro no browser."
   }
 }
