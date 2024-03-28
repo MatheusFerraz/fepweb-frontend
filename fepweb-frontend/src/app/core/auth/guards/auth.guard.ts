@@ -25,6 +25,7 @@ export class AuthGuard {
   }
 
   private goToLogin(): void {
+    // Poderia ser acoplado um microfrontend para tratar só a parte de autenticação da aplicação
     this.route.navigateByUrl('/auth/login');
   }
 }
