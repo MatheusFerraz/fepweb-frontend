@@ -1,0 +1,54 @@
+<po-container>
+  <div class="po-row">
+    <div class="po-md-12">
+      <form [formGroup]="form">
+        <div class="po-row">
+          <po-input
+            class="po-md-4"
+            id="inputSearch"
+            [p-placeholder]="
+              'label.acoesGerais.pesquisarPorQualquerAtributo' | translate
+            "
+            p-icon="po-icon po-icon-search"
+            formControlName="inputSearch"
+          >
+          </po-input>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <po-table
+    [p-actions-right]="true"
+    [p-actions]="tableActions"
+    [p-container]="tableContainer"
+    [p-loading-show-more]="tableIsLoading"
+    [p-columns]="tableColumns"
+    [p-items]="listaParticipanteTemp"
+    [p-sort]="tableSort"
+    [p-hide-table-search]="true"
+    [p-show-more-disabled]="showMoreDisabled"
+  >
+    <ng-template p-table-cell-template let-column="column" let-row="row">
+      <div *ngIf="column.property === 'isAssinaEletronicamente'">
+        <span *ngIf="row.isAssinaEletronicamente === 1">{{
+          'label.simNao.sim' | translate
+        }}</span>
+
+        <span *ngIf="row.isAssinaEletronicamente === 0">{{
+          'label.simNao.nao' | translate
+        }}</span>
+      </div>
+
+      <div *ngIf="column.property === 'isAtivo'">
+        <span *ngIf="row.isAtivo === 1">{{
+          'label.simNao.sim' | translate
+        }}</span>
+
+        <span *ngIf="row.isAtivo === 0">{{
+          'label.simNao.nao' | translate
+        }}</span>
+      </div>
+    </ng-template>
+  </po-table>
+</po-container>

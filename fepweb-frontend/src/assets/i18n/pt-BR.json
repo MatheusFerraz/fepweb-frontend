@@ -3,7 +3,28 @@
     "gerenciamentoParticipantes": "Gerenciar Participantes"
   },
   "label": {
-    "mensagemErroLadoServidor": "Ocorreu um erro ao processar a operação.",
-    "mensagemErroBrowser": "Não foi possível concluir a operação. Ocorreu um erro no browser."
+    "mensagens": {
+      "mensagemErroLadoServidor": "Ocorreu um erro ao processar a operação.",
+      "mensagemErroBrowser": "Não foi possível concluir a operação. Ocorreu um erro no browser."
+    },
+    "acoesGerais": {
+      "editar": "Editar",
+      "excluir": "Excluir",
+      "pesquisarPorQualquerAtributo": "Procure por qualquer atributo da tabela..."
+    },
+    "simNao": {
+      "sim": "Sim",
+      "nao": "Não"
+    },
+    "gerenciamentoParticipante": {
+      "codigo": "Código",
+      "codigoExterno": "Código Externo",
+      "nome": "Nome",
+      "cpfCnpj": "CPF/CNPJ",
+      "telefone": "Telefone",
+      "assinaEletronicamente": "Assina digital/eletronicamente",
+      "status": "Status",
+      "cadastrarNovoParticipante": "Adicionar Participante"
+    }
   }
 }

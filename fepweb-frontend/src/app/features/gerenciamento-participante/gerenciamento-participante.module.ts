@@ -16,6 +16,7 @@ import {
 } from '@po-ui/ng-components';
 import { GerenciamentoParticipantesRoutingModule } from './gerenciamento.participante.routing.module';
 import { GerenciamentoParticipanteContainerComponent } from './containers/gerenciamento-participante-container.component';
+import { ParticipanteListComponent } from './components/participante-list/participante-list.component';
 
 @NgModule({
   imports: [
@@ -35,6 +36,9 @@ import { GerenciamentoParticipanteContainerComponent } from './containers/gerenc
     TranslateModule,
     GerenciamentoParticipantesRoutingModule,
   ],
-  declarations: [GerenciamentoParticipanteContainerComponent],
+  declarations: [
+    GerenciamentoParticipanteContainerComponent,
+    ParticipanteListComponent,
+  ],
 })
 export class GerenciamentoParticipanteModule {}

@@ -35,16 +35,17 @@ export class ErrorCatchingInterceptor implements HttpInterceptor {
 
         if (error.error instanceof ErrorEvent) {
           errorMessage = this.translateService.instant(
-            'label.mensagemErroBrowser'
+            'label.mensagens.mensagemErroBrowser'
           );
         } else {
           if (error?.error?.errors?.length > 0) {
             errorMessage =
-              this.translateService.instant('label.mensagemErroLadoServidor') +
-              `${this.concatenateErrorMessages(error)}`;
+              this.translateService.instant(
+                'label.mensagens.mensagemErroLadoServidor'
+              ) + `${this.concatenateErrorMessages(error)}`;
           } else {
             errorMessage = this.translateService.instant(
-              'label.mensagemErroLadoServidor'
+              'label.mensagens.mensagemErroLadoServidor'
             );
           }
         }
